@@ -1,0 +1,13 @@
+
+<!--<div class="underlay"></div>-->
+<!--<div class="description">-->
+<!--  <h1>Witaj na stronie Blogi!</h1>-->
+<!--  <p>w trakcie pracy.</p>-->
+<!--</div>-->
+<h1><%= link_to "New Blog", new_blog_path(@blog) %></h1>
+
+<% @blogs.each do |blog| %>
+  <h3><%= link_to blog.title, blog %></h3>
+
+
+<% end %>

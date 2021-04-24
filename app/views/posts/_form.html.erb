@@ -1,0 +1,9 @@
+
+<%= form_for(@post) do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title, placeholder: 'Type the post title here' %><br>
+  <%= f.label :user_id %><br>
+  <%= f.number_field :user_id, placeholder: 'Type the user_id here' %><br>
+
+  <%= f.submit %>
+<% end %>
