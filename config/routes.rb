@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :posts
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+  get "signup", to: "registrations#new"
+  post "signup", to: "registrations#create"
 end
 
