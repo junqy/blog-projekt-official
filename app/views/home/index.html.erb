@@ -1,8 +1,13 @@
 <p class='content p-2'>Find me in app/views/home/index.html.erb</p>
-<div class="underlay"></div>
-<div class="description">
-  <h1>Witaj na stronie głównej!</h1>
-  <p>w trakcie pracy.</p>
-  <%= link_to 'przejdź do blogów', blogs_path %>
+<div class = "body-blog">
+  <div class="homepagelay">
+    <div class = "blog-info">
+      <h1>Witaj na stronie głównej!</h1>
+      <p>w trakcie pracy.</p>
+    </div>
+    <div class = "blog-link">
+      <%= link_to 'przejdź do blogów', blogs_path, class: 'btn' %>
+    </div>
+  </div>
 </div>
 

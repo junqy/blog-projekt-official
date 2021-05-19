@@ -16,10 +16,10 @@
 body {
     padding: 0;
     margin: 0;
-    background: #F2F8FD;
+    background: #F0F0F0;
 }
 .navbar {
-    background:#B7D4FF;
+    background:#3EB595;
 }
 .nav-link,
 .navbar-brand {
@@ -37,29 +37,4 @@ body {
     justify-content: flex-end;
 }
 
-.underlay {
-    position: absolute;
-    border-radius: 25px;
-    min-height: 20%;
-    min-width: 30%;
-    left: 35%;
-    top: 35%;
-    background: #B7D4FF;
-}
-
-.description {
-    left: 50%;
-    position: absolute;
-    top: 45%;
-    transform: translate(-50%, -55%);
-    text-align: center;
-}
-.description h1 {
-    color: #fff;
-}
-.description p {
-    color: #fff;
-    font-size: 1.3rem;
-    line-height: 1.5;
-}
 
