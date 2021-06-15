@@ -11,6 +11,9 @@
             <li class="nav-item">
               <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
             </li>
+            <li class="nav-item">
+              <%= link_to 'Edit profile', edit_user_registration_path, class: 'nav-link' %>
+            </li>
           <% else %>
             <li class="nav-item">
               <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
@@ -19,7 +22,12 @@
               <%= link_to 'Register', new_user_registration_path, class: 'nav-link' %>
             </li>
           <% end %>
+          <form class="d-flex" action="/search">
+            <input class="form-control me-2" name="q" type="search" placeholder="Search post title" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Search</button>
+          </form>
         </ul>
       </div>
     </nav>
   </div>
+</div>

@@ -1,14 +1,6 @@
-
-<h4 class =' mb-4 pt-4'>
-  <span>Posts</span>
-  <%= link_to blog_path(@blog), class: "btn btn-secondary float-right" do %>
-    <i class='fas fa-arrow-left'></i>
-  <% end %>
-  <% if current_user == @blog.user%>
-    <%= link_to "New Post", new_blog_post_path(model: [@blog, @post]), class: 'btn btn-primary float-right mr-2' %>
-  <% end %>
+<h4 class ='d-flex justify-content-between mb-4 pt-4'>
+  <span>Search results</span>
 </h4>
-
 <% @posts.each do |post| %>
   <%= link_to blog_post_path(@blog, post), class: 'text-decoration-none' do %>
     <div class="card mb-3">

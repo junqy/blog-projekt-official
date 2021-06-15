@@ -40,3 +40,24 @@
 .blog-link:hover{
     background-image: linear-gradient(to right, #E3E3E3 0%, #FFFFFF 100%);
 }
+
+.trash-btn{
+    opacity: 0.7;
+}
+
+.trash-btn:hover{
+    opacity: 1;
+}
+
+.media-box-comment{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.comment-content{
+    margin-left: 10px;
+    margin-bottom: 30px;
+    word-break:break-all;
+}
+

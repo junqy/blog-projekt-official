@@ -1,0 +1,10 @@
+
+<%= form_with model: [@blog, @post, @post.comments.build ] do |f| %>
+  <div class="form-group">
+    <%= f.text_area :content, placeholder: 'Type comment here', class:'form-control' %><br>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Comment", class: "btn btn-primary" %>
+  </div>
+<% end %>

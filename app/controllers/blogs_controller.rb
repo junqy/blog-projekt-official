@@ -1,11 +1,17 @@
 class BlogsController < ApplicationController
 
   before_action :find_blog, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :is_author?, only: [:edit, :update, :destroy]
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all  #authenticate tylko przy edycji
   end
 
   def show
+    @blog = Blog.find(params[:id])
+    if @blog.nil?
+      redirect_to blogs_path
+    end
   end
 
   def new
@@ -14,6 +20,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.user_id = current_user.id
     if @blog.save
       redirect_to @blog, notice: 'The blog was created!'
     else
@@ -45,5 +52,8 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
   end
 
+  def is_author?
+    redirect_to root_path unless @blog.user_id == current_user.id
+  end
 
 end

@@ -1,4 +1,14 @@
 
-<h1>Edit post</h1>
-<%= render 'form' %>
-<%= link_to 'Back', post_path %>
+<%= link_to blog_posts_path, class: "btn btn-secondary mb-3 mt-3" do %>
+  <i class='fas fa-arrow-left'></i>
+<% end %>
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h4 class='card-title'>Editing Post</h4>
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>

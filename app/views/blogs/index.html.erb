@@ -1,13 +1,16 @@
 
-<!--<div class="underlay"></div>-->
-<!--<div class="description">-->
-<!--  <h1>Witaj na stronie Blogi!</h1>-->
-<!--  <p>w trakcie pracy.</p>-->
-<!--</div>-->
-<h1><%= link_to "New Blog", new_blog_path(@blog) %></h1>
+<h4 class ='d-flex justify-content-between mb-4 pt-4'>
+  <span>Blogs</span>
+  <%= link_to "New Blog", new_blog_path(@blog), class: 'btn btn-primary' %>
+</h4>
 
 <% @blogs.each do |blog| %>
-  <h3><%= link_to blog.title, blog %></h3>
+  <%= link_to blog, class: 'text-decoration-none' do %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class='card-title text-dark'><%=blog.title %></h5>
 
-
+      </div>
+    </div>
+  <% end %>
 <% end %>
