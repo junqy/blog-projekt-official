@@ -1,24 +1,17 @@
-# README
+# rails-blog-project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Basic blog project developed with Ruby on Rails 
 
-Things you may want to cover:
+![demoblogapp](https://user-images.githubusercontent.com/80849638/167483640-23b99293-7ff5-4460-8fee-3ac421211a57.gif)
 
-* Ruby version
+## Demo
 
-* System dependencies
+Demo is available on: https://damp-citadel-67218.herokuapp.com/
 
-* Configuration
+## Functionalities
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Registering an account / logging in 
+* Creating/editing/removing blogs and posts
+* Adding/deleting comments
+* Searching by post name
+* Admin panel
